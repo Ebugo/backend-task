@@ -42,7 +42,7 @@ app.use((err, req, res, next) => {
 
 app.use((req, res) => {
   res.status(404)
-  .json(responseHandler(false, 'Sorry, we do not have that endpoint at the moment.'));
+  .json(responseHandler(false, 'endpoint unavailable at the moment.'));
 });
 
 app.listen(port, () => console.log(`Server listening on port ${port}`));
