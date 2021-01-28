@@ -2,7 +2,7 @@
 
 ## LIVE URL
 
-https://
+https://flutterwave-be-test.herokuapp.com
 
 ## PURPOSE
 
@@ -24,21 +24,29 @@ Create a simple rule-validation API with the response structure for your API fas
 
 A request to fetch the  should look like
 
-`GET` < / >
+`GET` < https://flutterwave-be-test.herokuapp.com/ >
 
 Response format:
 
 `{
-
+    "message": "My Rule-Validation API",
+    "status": "success",
+    "data": {
+        "name": "Gospel Chinyereugo",
+        "github": "@Ebugo",
+        "email": "gospelokpara@gmail.com",
+        "mobile": "08109503956",
+        "twitter": "@Codebug_"
+    }
 }`
 
-`POST` < / >
+`POST` < https://flutterwave-be-test.herokuapp.com/validate-rule >
 
 Request body:
 
 `{
   "rule": {
-    "field": "missions.count"
+    "field": "missions.count",
     "condition": "gte",
     "condition_value": 30
   },
@@ -48,9 +56,9 @@ Request body:
     "age": 34,
     "position": "Captain",
     "missions": {
-      count: 45,
-      successful: 44,
-      failed: 1
+      "count": 45,
+      "successful": 44,
+      "failed": 1
     }
   }
 }`
